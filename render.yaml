@@ -1,20 +1,10 @@
-databases:
-  - name: Bitcoin
-    databaseName: carefi_bitcoin_api_database
-    user: carefi_bitcoin_api_database_user
-
 services:
   - type: web
     name: Bitcoin
     env: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn mysite.wsgi:application"
+    startCommand: cd Bitcoin && gunicorn Bitcoin.wsgi:application
+    healthCheckPath: /
     envVars:
-      - key: DATABASE_URL
-        fromDatabase:
-          name: Bitcoin
-          property: connectionString
-      - key: SECRET_KEY
+      - key: "django-insecure-866l@6llvqyk=7h$1q6_@&%z^@ho@jakx#mb7#0vrwohfvn%6!"
         generateValue: true
-      - key: WEB_CONCURRENCY
-        value: 4
