@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
+    <title>CareFI-API</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">API Collection</a>
+      </div>
+    </nav>
+    <div class="mt-4">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col" style="text-align: center">Api-Type</th>
+            <th scope="col" style="text-align: center">Route</th>
+            <th scope="col" style="text-align: center">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-active">
+            <th scope="row" style="text-align: center">GET</th>
+            <td class="pt-2" style="text-align: center">
+              <p class="text-muted mt-2">
+                https://carefi-api-qrlt.onrender.com/api/getCurrentPrice/{{currency}}
+              </p>
+            </td>
+            <td class="pt-2" style="text-align: center">
+              <a href="{% url 'currentPrice' currency %}"
+                ><button type="button" class="btn btn-primary">Call</button></a
+              >
+            </td>
+          </tr>
+
+          <tr class="table-active">
+            <th scope="row" style="text-align: center">GET</th>
+            <td class="pt-2" style="text-align: center">
+              <p class="text-muted mt-2">
+                https://carefi-api-qrlt.onrender.com/api/all
+              </p>
+            </td>
+            <td class="pt-2" style="text-align: center">
+              <a href="{% url 'allBitcoin' %}"
+                ><button type="button" class="btn btn-primary">Call</button></a
+              >
+            </td>
+          </tr>
+
+          <tr class="table-active">
+            <th scope="row" style="text-align: center">GET</th>
+            <td class="pt-2" style="text-align: center">
+              <p class="text-muted mt-2">
+                https://carefi-api-qrlt.onrender.com/api/getBitcoinListByTimestamp/{{currency}}/{{from_timestamp}}/{{to_timestamp}}
+              </p>
+            </td>
+            <td class="pt-2" style="text-align: center">
+              <a href="{% url 'bitcoinList' currency from_timestamp to_timestamp %}"
+                ><button type="button" class="btn btn-primary">Call</button></a
+              >
+            </td>
+          </tr>
+
+          <tr class="table-active">
+            <th scope="row" style="text-align: center">POST</th>
+            <td class="pt-2" style="text-align: center">
+              <p class="text-muted mt-2">
+                https://carefi-api-qrlt.onrender.com/api/api-auth/login/
+              </p>
+            </td>
+            <td class="pt-2" style="text-align: center">
+              <a href="https://carefi-api-qrlt.onrender.com/api/api-auth/login/"
+                ><button type="button" class="btn btn-primary">Call</button></a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <div class="d-grid gap-2" style="display:flex;justify-content: center;">
+          <a  href="https://web.postman.co/workspace/CareFI~b9df6c8a-b62a-4626-b9b9-c11b02f6fd11"><button class="btn btn-lg btn-primary"  type="button">Go to Postman Collection For this API</button></a>
+      </div>
+    </div>
+
+    {% comment %} Footer {% endcomment %}
+    <footer style="text-align:center;" class="mt-4">
+      @Made with ❤️ Gourav Kumar Singh
+    </footer>
+  </body>
+</html>
