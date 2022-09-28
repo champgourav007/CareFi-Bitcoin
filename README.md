@@ -1,11 +1,12 @@
 # CareFI API
 <img src="https://img.shields.io/website-up-down-green-red/http/monip.org.svg"> <img src="http://ForTheBadge.com/images/badges/made-with-python.svg">
 <br>
-##Website Link => <a href="https://carefi-api-qrlt.onrender.com/">CareFi-API</a>
+
+## Website Link <a href="https://carefi-api-qrlt.onrender.com/">CareFi-API</a>
 1. This project is based on getting the real time `Bitcoin` Price in any currency.
 2. Also it will store the `Bitcoin` Price in database (`PostgreSQL` of render.com).
 
-##Home Page
+## Home Page
 <img src="./ExtraFiles/HomePage.png">
 
 * `https://carefi-api-qrlt.onrender.com/api/getCurrentPrice/{currency}` for getting the current price.
