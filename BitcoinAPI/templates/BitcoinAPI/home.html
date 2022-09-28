@@ -25,11 +25,12 @@
         </thead>
         <tbody>
           <tr class="table-active">
-            <th scope="row" style="text-align: center">GET</th>
-            <td class="pt-2" style="text-align: center">
+            <th scope="row" style="text-align: center;">GET</th>
+            <td class="pt-2" style="text-align: center; display:flex;align-items: baseline;justify-content: space-between;">
               <p class="text-muted mt-2">
                 https://carefi-api-qrlt.onrender.com/api/getCurrentPrice/{{currency}}
               </p>
+              <span class="badge rounded-pill bg-danger ml-2" style="color:white;">Auth Required</span>
             </td>
             <td class="pt-2" style="text-align: center">
               <a href="{% url 'currentPrice' currency %}"
@@ -39,11 +40,12 @@
           </tr>
 
           <tr class="table-active">
-            <th scope="row" style="text-align: center">GET</th>
-            <td class="pt-2" style="text-align: center">
+            <th scope="row" style="text-align: center;">GET</th>
+            <td class="pt-2" style="text-align: center; display:flex;align-items: baseline;justify-content: space-between;">
               <p class="text-muted mt-2">
                 https://carefi-api-qrlt.onrender.com/api/all
               </p>
+              <span class="badge rounded-pill bg-success ml-2" style="color:white;">No Auth</span>
             </td>
             <td class="pt-2" style="text-align: center">
               <a href="{% url 'allBitcoin' %}"
@@ -53,11 +55,12 @@
           </tr>
 
           <tr class="table-active">
-            <th scope="row" style="text-align: center">GET</th>
-            <td class="pt-2" style="text-align: center">
+            <th scope="row" style="text-align: center;">GET</th>
+            <td class="pt-2" style="text-align: center; display:flex;align-items: baseline;justify-content: space-between;">
               <p class="text-muted mt-2">
                 https://carefi-api-qrlt.onrender.com/api/getBitcoinListByTimestamp/{{currency}}/{{from_timestamp}}/{{to_timestamp}}
               </p>
+              <span class="badge rounded-pill bg-danger ml-2" style="color:white;">Auth Required</span>
             </td>
             <td class="pt-2" style="text-align: center">
               <a href="{% url 'bitcoinList' currency from_timestamp to_timestamp %}"
@@ -67,11 +70,12 @@
           </tr>
 
           <tr class="table-active">
-            <th scope="row" style="text-align: center">POST</th>
-            <td class="pt-2" style="text-align: center">
+            <th scope="row" style="text-align: center;">POST</th>
+            <td class="pt-2" style="text-align: center; display:flex;align-items: baseline;justify-content: space-between;">
               <p class="text-muted mt-2">
                 https://carefi-api-qrlt.onrender.com/api/api-auth/login/
               </p>
+              <span class="badge rounded-pill bg-info ml-2" style="color:white;">Auth</span>
             </td>
             <td class="pt-2" style="text-align: center">
               <a href="https://carefi-api-qrlt.onrender.com/api/api-auth/login/"
