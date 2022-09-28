@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-866l@6llvqyk=7h$1q6_@&%z^@ho@jakx#mb7#0vrwohfvn%6!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["carefi-api-qrlt.onrender.com"]
 
 
 # Application definition
